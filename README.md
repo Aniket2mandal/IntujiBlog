@@ -35,28 +35,24 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
     <h2>API Endpoints</h2>
     <h3>User Registration & Authentication</h3>
     <ul>
-        <li><strong>POST /api/users/register:</strong> Register a new user.</li>
-        <li><strong>POST /api/users/login:</strong> Log in and receive a token.</li>
+        <li><strong>POST /api/register:</strong> Register a new user.</li>
+        <li><strong>POST /api/login:</strong> Log in and receive a token.</li>
     </ul>
     <h3>Blog Post Management</h3>
     <ul>
-        <li><strong>POST /api/posts:</strong> Create a new blog post.</li>
-        <li><strong>GET /api/posts:</strong> View all blog posts.</li>
-        <li><strong>GET /api/posts/:id:</strong> View a specific blog post.</li>
+        <li><strong>POST /api/posts/store:</strong> Create a new blog post.</li>
+        <li><strong>GET /api/posts/:</strong> View all blog posts.</li>
+        <li><strong>GET /api/posts/id:id:</strong> View a specific blog post.</li>
     </ul>
     <h3>Comments</h3>
     <ul>
-        <li><strong>POST /api/posts/:postId/comments:</strong> Add a comment to a blog post.</li>
-        <li><strong>GET /api/posts/:postId/comments:</strong> View all comments for a specific post.</li>
-    </ul>
-    <h3>Image Uploads</h3>
-    <ul>
-        <li><strong>POST /api/posts/:postId/images:</strong> Upload an image for a blog post.</li>
+        <li><strong>POST /api/comments/stores:</strong> Add a comment to a blog post.</li>
+        <li><strong>GET /api/posts/:</strong> View all comments for a specific post.</li>
     </ul>
     <h3>User Profile Management</h3>
     <ul>
-        <li><strong>GET /api/users/profile:</strong> View user profile.</li>
-        <li><strong>PATCH /api/users/profile:</strong> Update user profile.</li>
+        <li><strong>GET /api/users/</strong> View user profile.</li>
+        <li><strong>PATCH /api/users/update</strong> Update user profile.</li>
     </ul>
     <h2>Security</h2>
     <p>The API uses token-based authentication (JWT) to secure all routes, requiring a valid token for access to protected resources.</p>
