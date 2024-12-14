@@ -21,46 +21,81 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h1>Blog Website API</h1>
+    <p>This repository contains the backend API for a blog website, providing essential features like user registration, authentication, blog post management, comment functionality, and image uploads.</p>
+    <h2>Features</h2>
+    <ul>
+        <li><strong>User Registration & Authentication:</strong> Secure user registration, login, and token-based authentication.</li>
+        <li><strong>Blog Post Management:</strong> Authenticated users can create, view, and manage blog posts.</li>
+        <li><strong>Comments:</strong> Users can add and view comments on blog posts.</li>
+        <li><strong>Image Uploads:</strong> Users can upload and associate images with posts.</li>
+        <li><strong>User Profile Management:</strong> View and update user profile information.</li>
+        <li><strong>Error Handling:</strong> Basic error handling for invalid requests.</li>
+    </ul>
+    <h2>API Endpoints</h2>
+    <h3>User Registration & Authentication</h3>
+    <ul>
+        <li><strong>POST /api/users/register:</strong> Register a new user.</li>
+        <li><strong>POST /api/users/login:</strong> Log in and receive a token.</li>
+    </ul>
+    <h3>Blog Post Management</h3>
+    <ul>
+        <li><strong>POST /api/posts:</strong> Create a new blog post.</li>
+        <li><strong>GET /api/posts:</strong> View all blog posts.</li>
+        <li><strong>GET /api/posts/:id:</strong> View a specific blog post.</li>
+    </ul>
+    <h3>Comments</h3>
+    <ul>
+        <li><strong>POST /api/posts/:postId/comments:</strong> Add a comment to a blog post.</li>
+        <li><strong>GET /api/posts/:postId/comments:</strong> View all comments for a specific post.</li>
+    </ul>
+    <h3>Image Uploads</h3>
+    <ul>
+        <li><strong>POST /api/posts/:postId/images:</strong> Upload an image for a blog post.</li>
+    </ul>
+    <h3>User Profile Management</h3>
+    <ul>
+        <li><strong>GET /api/users/profile:</strong> View user profile.</li>
+        <li><strong>PATCH /api/users/profile:</strong> Update user profile.</li>
+    </ul>
+    <h2>Security</h2>
+    <p>The API uses token-based authentication (JWT) to secure all routes, requiring a valid token for access to protected resources.</p>
+    <hr>
+    <h2>Laravel Project Setup from GitHub</h2>
+    <p>Follow these steps to set up the Laravel project from GitHub:</p>
+    <ol>
+        <li>
+            <h2>Clone the Repository</h2>
+            <p>Clone the Laravel project from GitHub using the following command:</p>
+            <pre><code>git clone https://github.com/Aniket2mandal/IntujiBlog.git</code></pre>
+        </li>
+        <li>
+            <h3>Install Dependencies</h3>
+            <p>Navigate into the project directory and install the required dependencies using Composer:</p>
+            <pre><code>cd repository-name
+composer install</code></pre>
+        </li>
+        <li>
+            <h2>Set Up Environment File</h2>
+            <p>Copy the <code>.env.example</code> file to <code>.env</code>:</p>
+            <pre><code>cp .env.example .env</code></pre>
+        </li>
+        <li>
+            <h2>Set Up Database</h2>
+            <p>Configure the <code>.env</code> file to include the correct database connection details (DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD).</p>
+        </li>
+        <li>
+            <h2>Run Migrations </h2>
+            <pre><code>php artisan migrate</code></pre>
+        </li>
+        <li>
+            <h2>Seed the Database </h2>
+            <pre><code>php artisan db:seed</code></pre>
+        </li>
+        <li>
+            <h2>Serve the Application</h2>
+            <p>You can now serve the Laravel application locally:</p>
+            <pre><code>php artisan serve</code></pre>
+            <p>By default, the application will be available at <code>http://localhost:8000</code>.</p>
+        </li>
+    </ol>
